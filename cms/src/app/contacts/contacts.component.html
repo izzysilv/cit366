@@ -5,7 +5,10 @@
   </div>
   <div class="col-xs-12">
     <cms-contacts-detail
-    *ngIf="selectedContact !== null"
-    (contact)="selectedContact = $event"></cms-contacts-detail>
+    *ngIf="selectedContact; else infoText"
+    [contact]="selectedContact"></cms-contacts-detail>
+    <ng-template #infoText>
+      <p>Please select a Contact.</p>
+    </ng-template>
   </div>
 </div>

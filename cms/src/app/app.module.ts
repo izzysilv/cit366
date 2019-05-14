@@ -7,6 +7,7 @@ import { ContactsDetailComponent } from './contacts/contacts-detail/contacts-det
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { HelpComponent } from './contacts/help/help.component';
 import { ContactItemComponent } from './contacts/contact-item/contact-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactItemComponent } from './contacts/contact-item/contact-item.compo
     ContactItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
