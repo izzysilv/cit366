@@ -1,14 +1,12 @@
 <div class="row">
-  <div class="col-xs-12">
-    <cms-contacts-list
-    (selectedContactEvent)="selectedContact = $event"></cms-contacts-list>
-  </div>
-  <div class="col-xs-12">
-    <cms-contacts-detail
-    *ngIf="selectedContact; else infoText"
-    [contact]="selectedContact"></cms-contacts-detail>
-    <ng-template #infoText>
-      <p>Please select a Contact.</p>
-    </ng-template>
+  <div class="container col-xs-12">
+    <div class="col-xs-12">
+      <cms-contacts-list
+      (selectedContactEvent)="selectedContact = $event"></cms-contacts-list>
+    </div>
+    <div class="col-xs-12">
+      <cms-contacts-detail
+      [contact]="selectedContact"></cms-contacts-detail>
+    </div>
   </div>
 </div>
