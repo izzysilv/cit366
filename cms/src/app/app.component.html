@@ -1,6 +1,15 @@
-<cms-header (featuredSelected)="onNavigate($event)"></cms-header>
+<cms-header
+(selectedFeatureEvent)="switchView($event)">
+</cms-header>
+<cms-documents
+  *ngIf="selectedFeature === 'document'">
+</cms-documents>
+<cms-message-list
+  *ngIf="selectedFeature === 'message'">
+</cms-message-list>
 <cms-contacts
-  *ngIf="loadedFeature === 'contact'"></cms-contacts>
+  *ngIf="selectedFeature === 'contact'">
+</cms-contacts>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
