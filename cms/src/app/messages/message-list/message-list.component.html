@@ -12,13 +12,13 @@
             <cms-message-item
             *ngFor="let message of messages"
             [message]="message"
-            (messageSelected)="onMessageSelected(message)"></cms-message-item>
+            (messageSelected)="onSelected(message)"></cms-message-item>
           </div>
         </div>
       </div>
       <div class="panel-footer">
         <cms-message-edit
-        ></cms-message-edit>
+        (addMessageEvent)="onAddMessage($event)"></cms-message-edit>
       </div>
     </div>
   </div>
