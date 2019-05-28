@@ -27,8 +27,8 @@ export class MessageEditComponent implements OnInit {
   }
 
   onClear() {
-      const msgSubject = "";
-      const msgText = "";
+      const msgSubject = null;
+      const msgText = null;
   }
 
 }
